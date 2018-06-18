@@ -19,7 +19,7 @@ const largestOfFour = arr => {
     console.log(`largestNum0: ${largestNum0}`); //5
 
     arr1.map(num => num > largestNum1 ? largestNum1 = num : num); //27
-    console.log(`largestNum1: ${largestNum1}`); //39
+    console.log(`largestNum1: ${largestNum1}`); //27
 
     arr2.map(num => num > largestNum2 ? largestNum2 = num : num); //39
     console.log(`largestNum2: ${largestNum2}`); //39
@@ -37,9 +37,6 @@ const largestOfFour = arr => {
 }
 
 // largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
-
-// Found this long solution completly on my own. Took about 50 minutes. Next step is refactoring to write this in a DRY way (too repetitive);
-
 // largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]) should return an array.
 // largestOfFour([[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [1000, 1001, 857, 1]]) should return [27, 5, 39, 1001].
 // largestOfFour([[4, 9, 1, 3], [13, 35, 18, 26], [32, 35, 97, 39], [1000000, 1001, 857, 1]]) should return [9, 35, 97, 1000000].
