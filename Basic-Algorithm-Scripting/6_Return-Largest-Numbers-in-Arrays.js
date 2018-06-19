@@ -34,6 +34,20 @@ const largestOfFour = arr => {
     finalArr.push(largestNum3);
     console.log(finalArr);
     return finalArr;
+
+    // For loop solution https://medium.freecodecamp.org/three-ways-to-return-largest-numbers-in-arrays-in-javascript-5d977baa80a1
+    // const largestOfFour = arr => {
+    //     let largestNumber = [0, 0, 0, 0];
+    //     for (let i = 0; i < arr.length; i++) {
+    //         for (let j = 0; j < arr[i].length; j++) {
+    //             if (arr[i][j] > largestNumber[i]) {
+    //                 largestNumber[i] = arr[i][j]
+    //             }
+    //         }
+    //     }
+    //     return largestNumber;
+    // }
+
 }
 
 // largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
