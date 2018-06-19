@@ -2,38 +2,55 @@
 
 //     Remember, you can iterate through an array with a simple for loop, and access each member with array syntax arr[i].
 
+//My latest solution that accounts for negative numbers too (up to negative 1000)
 const largestOfFour = arr => {
-    let finalArr = [];
-    let largestNum0 = 0;
-    let largestNum1 = 0;
-    let largestNum2 = 0;
-    let largestNum3 = -100;
+    const largestNum = [-1000, -1000, -1000, -1000]
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            if (arr[i][j] > 0 && arr[i][j] > largestNum[i]) {
+                largestNum[i] = arr[i][j];
+            } else if (arr[i][j] < 0 && arr[i][j] > largestNum[i]) {
+                largestNum[i] = arr[i][j];
+                console.log(`largestNum ${largestNum}`);
+            }
+        }
+    }
+    return largestNum;
+}
 
-    const arr0 = arr[0]
-    const arr1 = arr[1]
-    const arr2 = arr[2]
-    const arr3 = arr[3]
-    console.log(`arr0: ${arr[0]}`);
 
-    arr0.map(num => num > largestNum0 ? largestNum0 = num : num); //5
-    console.log(`largestNum0: ${largestNum0}`); //5
+// const largestOfFour = arr => {
+//     let finalArr = [];
+//     let largestNum0 = 0;
+//     let largestNum1 = 0;
+//     let largestNum2 = 0;
+//     let largestNum3 = -100;
 
-    arr1.map(num => num > largestNum1 ? largestNum1 = num : num); //27
-    console.log(`largestNum1: ${largestNum1}`); //27
+//     const arr0 = arr[0]
+//     const arr1 = arr[1]
+//     const arr2 = arr[2]
+//     const arr3 = arr[3]
+//     console.log(`arr0: ${arr[0]}`);
 
-    arr2.map(num => num > largestNum2 ? largestNum2 = num : num); //39
-    console.log(`largestNum2: ${largestNum2}`); //39
+//     arr0.map(num => num > largestNum0 ? largestNum0 = num : num); //5
+//     console.log(`largestNum0: ${largestNum0}`); //5
 
-    arr3.map(num => num > largestNum3 ? largestNum3 = num : num); //1001
-    console.log(`largestNum3: ${largestNum3}`); //1001
+//     arr1.map(num => num > largestNum1 ? largestNum1 = num : num); //27
+//     console.log(`largestNum1: ${largestNum1}`); //27
 
-    // Push largestNum onto finalArr
-    finalArr.push(largestNum0);
-    finalArr.push(largestNum1);
-    finalArr.push(largestNum2);
-    finalArr.push(largestNum3);
-    console.log(finalArr);
-    return finalArr;
+//     arr2.map(num => num > largestNum2 ? largestNum2 = num : num); //39
+//     console.log(`largestNum2: ${largestNum2}`); //39
+
+//     arr3.map(num => num > largestNum3 ? largestNum3 = num : num); //1001
+//     console.log(`largestNum3: ${largestNum3}`); //1001
+
+//     // Push largestNum onto finalArr
+//     finalArr.push(largestNum0);
+//     finalArr.push(largestNum1);
+//     finalArr.push(largestNum2);
+//     finalArr.push(largestNum3);
+//     console.log(finalArr);
+//     return finalArr;
 
     // For loop solution https://medium.freecodecamp.org/three-ways-to-return-largest-numbers-in-arrays-in-javascript-5d977baa80a1
     // const largestOfFour = arr => {
