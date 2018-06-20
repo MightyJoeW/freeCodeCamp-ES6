@@ -3,9 +3,15 @@
 // This challenge can be solved with the.endsWith() method, which was introduced in ES2015.But for the purpose of this challenge, we would like you to use one of the JavaScript substring methods instead.
 
 const confirmEnding = (str, target) => {
-    return str.substr(-target.length) === target;
+    return str.endsWith(target);
 }
 confirmEnding("Abstraction", "action")
+
+// ES5 Solution
+// const confirmEnding = (str, target) => {
+//     return str.substr(-target.length) === target;
+// }
+// confirmEnding("Abstraction", "action")
 
 // confirmEnding("Bastian", "n") should return true.
 // confirmEnding("Congratulation", "on") should return true.
