@@ -1,14 +1,10 @@
-// Create a function that looks through an array (first argument) and returns the first element in the array that passes a truth test (second argument). If no element passes the test, return undefined.
+// // Truncate a string (first argument) if it is longer than the given maximum string length (second argument). 
+// Return the truncated string with a ... ending.
 
-const findElement = (arr, func) => {
-    let num = 0;
-    for (let i = 0; i < arr.length; i++) {
-        num = arr[i]
-        if (func(num)) {
-            return arr[i]
-        }
-    }
-    return undefined;
+const truncateString = (str, num) => {
+    return str.length > num
+        ? `${str.slice(0, num)}...`
+        : str
 }
 
-findElement([1, 2, 3, 4], num => num % 2 === 0);
+truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length)
