@@ -4,8 +4,9 @@
 
 //     Hint: Try converting each value to a Boolean.
 
-function bouncer(arr) {
-    // Don't show a false ID to this bouncer.
+const bouncer = arr => {
+    // filter returns a Boolean (takes single argument and 
+    //returns true for truthy values && false for falsy values)
     return arr.filter(Boolean);
 }
 
